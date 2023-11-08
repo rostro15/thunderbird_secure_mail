@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Headers checker",
+  "description": "Vérifie les authentifications SPF, DMARC et DKIM à partir des entêtes des emails reçus.",
+  "version": "1.0",
+  "author": "Samsam Inc.",
+  "applications": {
+    "gecko": {
+      "id": "x-all-headers@samsam",
+      "strict_min_version": "66.0"
+    }
+  },
+  "permissions": [
+    "messagesRead"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "message_display_action": {
+    "default_icon": "unknown.png",
+    "default_title": "Le statut de ce message est inconnu"
+  },
+  "icons": {
+    "64": "validation.png",
+    "32": "validation.png",
+    "16": "validation.png"
+  }
+}
